@@ -26,7 +26,7 @@ public class ThreeSumTest {
 
 	List<List<Integer>> cases = Lists.newArrayList();
 	List<List<List<Integer>>> expectes = Lists.newArrayList();
-	int runs = 2;
+	int runs = 3;
 
 	@Before
 	public void before() {
@@ -35,7 +35,7 @@ public class ThreeSumTest {
 
 	@Test(timeout = 20000)
 	public void testBruteForce() {
-		IntStream.range(0, runs).forEach(i -> {
+		IntStream.range(0, runs).forEachOrdered(i -> {
 			System.out.println("Case " + i);
 			List<List<Integer>> result = ThreeSum.bruteForce(cases.get(i).stream().mapToInt(e -> (int) e).toArray());
 			System.out.println("Case " + i + " >> result = " + Arrays.toString(result.toArray()));
