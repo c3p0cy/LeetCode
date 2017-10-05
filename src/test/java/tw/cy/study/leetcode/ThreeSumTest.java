@@ -32,6 +32,32 @@ public class ThreeSumTest {
 	public void before() {
 		loadTestCases();
 	}
+	
+	@Test(timeout = 1500)
+	public void testTwoIndexes2() {
+		IntStream.range(0, runs).forEachOrdered(i -> {
+			System.out.println("Case " + i);
+			List<List<Integer>> result = ThreeSum.twoIndexes2(cases.get(i).stream().mapToInt(e -> (int) e).toArray());
+			System.out.println("Case " + i + " >> result = " + Arrays.toString(result.toArray()));
+			List<List<Integer>> expected = expectes.get(i);
+			System.out.println("Case " + i + " >> expected = " + Arrays.toString(expected.toArray()));
+
+			assertTrue(getFailResult(expected, result), checkResult(expected, result));
+		});
+	}
+	
+	@Test(timeout = 1500)
+	public void testTwoIndexes() {
+		IntStream.range(0, runs).forEachOrdered(i -> {
+			System.out.println("Case " + i);
+			List<List<Integer>> result = ThreeSum.twoIndexes(cases.get(i).stream().mapToInt(e -> (int) e).toArray());
+			System.out.println("Case " + i + " >> result = " + Arrays.toString(result.toArray()));
+			List<List<Integer>> expected = expectes.get(i);
+			System.out.println("Case " + i + " >> expected = " + Arrays.toString(expected.toArray()));
+
+			assertTrue(getFailResult(expected, result), checkResult(expected, result));
+		});
+	}
 
 	@Test(timeout = 20000)
 	public void testBruteForce() {
