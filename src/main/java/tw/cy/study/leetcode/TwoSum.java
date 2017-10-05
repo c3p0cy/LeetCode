@@ -14,15 +14,6 @@ import java.util.stream.IntStream;
  */
 public class TwoSum {
 
-	public static void main(String[] args) {
-		TwoSum ts = new TwoSum();
-		int[] nums = new int[] { 2, 7, 11, 15 };
-		int target = 9;
-
-		int[] result = ts.twoPhaseHashMap(nums, target);
-		System.out.println(Arrays.toString(result));
-	}
-
 	/**
 	 * Time complexity: O(n)
 	 * Space complexity: O(n)
