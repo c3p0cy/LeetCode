@@ -1,16 +1,14 @@
 package tw.cy.study.leetcode;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /**
- * https://leetcode.com/problems/single-number/description/ Given an array of
- * integers, every element appears twice except for one. Find that single one.
- * Note: Your algorithm should have a linear runtime complexity. Could you
- * implement it without using extra memory?
+ * https://leetcode.com/problems/single-number/description/<br/>
+ * Given an array of integers, every element appears twice except for one.<br/>
+ * Find that single one.<br/>
+ *
+ * Note: Your algorithm should have a linear runtime complexity.<br/>
+ * Could you implement it without using extra memory?
  * 
  * Not found >> return 0
  * 

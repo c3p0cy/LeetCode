@@ -1,7 +1,5 @@
 package tw.cy.study.leetcode;
 
-import java.util.Arrays;
-
 public class ReverseString {
 
 	/**
